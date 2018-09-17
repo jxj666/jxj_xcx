@@ -1,9 +1,10 @@
 {
-  "pages": [ 
-    "pages/goodsInfo/main",
+  "pages": [
+    "pages/index/main",
     "pages/goodsClass/main",
-    "pages/index/main"
-   ],
+    "pages/goodsInfo/main"
+
+  ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
