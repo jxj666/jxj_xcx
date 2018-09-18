@@ -49,4 +49,7 @@ export default {
 .theme_bg_c {
   background: #ff142d;
 }
+.fff_bg_c{
+  background: #fff;
+}
 </style>

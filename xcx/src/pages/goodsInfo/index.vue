@@ -10,7 +10,7 @@
         </block>
       </swiper>
     </div>
-    <goods-info-head :goods='goodsInfo'></goods-info-head>
+    <goods-info-card :goods='goodsInfo'></goods-info-card>
     <div v-if="goodsInfo.free==1">
       <div class="bg_c h10"></div>
       <div class="listbox">
@@ -38,8 +38,8 @@
 
     <div class="bg_c h10"></div>
     <div class="listbox">
-      <div class="richText">
-      <rich-text :nodes="page" ></rich-text>
+      <div class="richText" :style="{'zoom':zoom}">
+        <rich-text :nodes="page"></rich-text>
       </div>
     </div>
 
@@ -50,7 +50,7 @@
 </template>
 
 <script>
-import goodsInfoHead from "@/components/goodsInfoHead";
+import goodsInfoCard from "@/components/goodsInfoCard";
 import goodsInfoNav from "@/components/goodsInfoNav";
 
 export default {
@@ -67,13 +67,13 @@ export default {
         "https://i8.mifile.cn/v1/a1/a64944d5-3213-66f0-395d-c11229cfc6f1.webp"
       ],
       goodsInfo: {},
-      page:' '
+      page: " ",
+      zoom: 1
     };
   },
 
   components: {
-    
-    goodsInfoHead,
+    goodsInfoCard,
     goodsInfoNav
   },
 
@@ -95,13 +95,18 @@ export default {
       });
     },
     upList(data) {
-      console.log(data.result.introduction)
-      this.page=data.result.introduction;
+      this.page = data.result.introduction;
+    },
+    getZoom() {
+      var width = wx.getSystemInfoSync().windowWidth;
+      console.log(width);
+      this.zoom = width / 1000 * 1.26;
     }
   },
 
   created() {},
   onShow() {
+    this.getZoom();
     this.getList();
   },
   onHide() {},
@@ -141,25 +146,25 @@ export default {
   .listbox {
     font-size: 30rpx;
     line-height: 2;
-    padding: 20rpx 60rpx 20rpx 20rpx;
+    padding: 20rpx 30rpx;
     display: flex;
     justify-content: space-between;
 
     &.option {
       background: url(../../../static/img/arrow.png) no-repeat 95vw center;
       background-size: 20rpx 20rpx;
+      padding: 20rpx 60rpx 20rpx 20rpx;
     }
     span {
     }
   }
-  .richText{
+  .richText {
     width: 100vw;
-    zoom: 0.47;
-    img{
+    img {
       width: 100%;
     }
   }
-  .h100{
+  .h100 {
     height: 100rpx;
   }
   .h10 {

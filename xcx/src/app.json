@@ -1,8 +1,9 @@
 {
   "pages": [
+    "pages/orderInfo/main",
+    "pages/goodsInfo/main",
     "pages/index/main",
-    "pages/goodsClass/main",
-    "pages/goodsInfo/main"
+    "pages/goodsClass/main"
 
   ],
   "window": {
