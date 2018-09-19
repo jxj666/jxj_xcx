@@ -3,11 +3,8 @@
     <div class="line_c h_1">
 
     </div>
-    <div class="box">
-      <span class="list1 first_c">订单总额
-        <span class="theme_c">￥{{order.money*order.time}}</span>
-      </span>
-      <span class="list2 theme_bg_c" @click="toPayInfo">提交订单</span>
+    <div class="box theme_bg_c">
+      <span>提交订单</span>
     </div>
   </div>
 </template>
@@ -18,14 +15,7 @@ export default {
   data() {
     return {};
   },
-  methods: {
-    toPayInfo() {
-      wx.setStorageSync("payInfo", this.order);
-      wx.navigateTo({
-        url: `../payInfo/main`
-      });
-    }
-  }
+  methods: {}
 };
 </script>
 
@@ -38,10 +28,13 @@ export default {
   background: #fff;
   .box {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
     span {
       line-height: 90rpx;
     }
+
     .list1 {
       margin-left: 30rpx;
       padding: 0 30rpx 0 0;

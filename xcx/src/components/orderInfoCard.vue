@@ -37,7 +37,6 @@ export default {
   }
   .listBox {
     width: 50vw;
-    // height: 170rpx;
     box-sizing: border-box;
     position: absolute;
     top: 5vw;

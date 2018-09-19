@@ -1,6 +1,10 @@
 {
   "pages": [
+
+
+
     "pages/index/main",
+    "pages/payInfo/main",
 
     "pages/orderInfo/main",
     "pages/goodsInfo/main",

@@ -52,4 +52,10 @@ export default {
 .fff_bg_c{
   background: #fff;
 }
+.h_1{
+  height: 1rpx;
+}
+.h_10{
+  height:10rpx;
+}
 </style>

@@ -12,38 +12,38 @@
     </div>
     <goods-info-card :goods='goodsInfo'></goods-info-card>
     <div v-if="goodsInfo.free==1">
-      <div class="bg_c h10"></div>
+      <div class="bg_c h_10"></div>
       <div class="listbox">
         <span class="second_c">促销</span>
         <span class="theme_c">免息</span>
       </div>
     </div>
 
-    <div class="bg_c h10"></div>
+    <div class="bg_c h_10"></div>
     <div class="listbox option">
       <span class="second_c ">已选</span>
       <span class="second_c">版本 {{goodsInfo.verison}}</span>
     </div>
-    <div class="bg_c h1"></div>
+    <div class="bg_c h_1"></div>
 
     <div class="listbox option">
       <span class="second_c">送至</span>
       <span class="second_c">你的地址</span>
     </div>
 
-    <div class="bg_c h10"></div>
+    <div class="bg_c h_10"></div>
     <div class="listbox option">
       <span class="second_c">规格参数/包装售后</span>
     </div>
 
-    <div class="bg_c h10"></div>
+    <div class="bg_c h_10"></div>
     <div class="listbox">
       <div class="richText" :style="{'zoom':zoom}">
         <rich-text :nodes="page"></rich-text>
       </div>
     </div>
 
-    <div class="bg_c h100"></div>
+    <div class="bg_c h_100"></div>
 
     <goods-info-nav :goods='goodsInfo'></goods-info-nav>
   </div>
@@ -164,13 +164,13 @@ export default {
       width: 100%;
     }
   }
-  .h100 {
+  .h_100 {
     height: 100rpx;
   }
-  .h10 {
+  .h_10 {
     height: 10rpx;
   }
-  .h1 {
+  .h_1 {
     height: 1rpx;
   }
 }

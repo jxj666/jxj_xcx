@@ -1,6 +1,6 @@
 <template>
   <div class="nav">
-    <div class="line_c h1">
+    <div class="line_c h_1">
 
     </div>
     <div class="box">
@@ -59,7 +59,7 @@ export default {
       background-size: 50rpx;
     }
   }
-  .h1 {
+  .h_1 {
     height: 1rpx;
   }
 }
