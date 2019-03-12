@@ -1,3 +1,11 @@
+<!--
+ * @Description: 
+ * @Author: 靳小健
+ * @Email: jinxiaojian@youxin.com
+ * @LastEditors: 靳小健
+ * @Date: 2019-03-12 14:50:18
+ * @LastEditTime: 2019-03-12 14:51:27
+ -->
 <template>
   <div class="index">
     <div class="topline line_c"></div>
@@ -106,7 +114,7 @@ export default {
   },
   onLoad() {
     wx.setNavigationBarTitle({
-      title: "好分期商城"
+      title: "jxjweb.top商城"
     });
   }
 };
